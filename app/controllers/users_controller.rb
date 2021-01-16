@@ -35,9 +35,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = User.find(params[:user_id])
+    @user_recipes = User.find_by(params[:user_id]).recipes
+    @user_favorites = User.find_by(params[:user_id]).favorites
+
+
     render : json => {
-      user: user
+      user_recipes: @user_recipe
+      user_favorites: @user_favorites     
     }
   end 
 
