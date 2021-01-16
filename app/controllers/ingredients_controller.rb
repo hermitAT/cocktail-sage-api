@@ -1,36 +1,34 @@
 class IngredientsController < ApplicationController
 
   def index
-    ingredients = Ingredient.all
+    @ingredients = Ingredient.all
 
     render :json => {
-      ingredients
+      ingredients: @ingredients
     }
-  end  
+  end
 
   def show
-    ingredient = Ingredient.find params[:id]
+    @ingredient = Ingredient.find(params[:id])
 
     render :json => {
-      ingredient
+      ingredient: @ingredient
     }
   end
 
-  def search_ingredients
-    ingredients = Ingredient.find_by ingredient_params
+  def ingredients_search
 
-    render :json => {
-      ingredients
-    }
-  end
-
-  private
-
-    def ingredient_params
-      params.require(:ingredient).permit(
-        :strength,
-        :category_id,
-        :flavour_id
-      )
+    if params.include :strength
+      @ingredients = Ingredient.where("strength = ?", params[:strength])
+    else params.include :flavour_id
+      @ingredients = Ingredient.where("flavour_id = ?", params[:flavour_id])
+    else params.include :category_id
+      @ingredients = Ingredient.where("category_id = ?", params[:category_id])
     end
+
+    render :json => {
+      ingredients: @ingredients
+    }
+  end
+  
 end
