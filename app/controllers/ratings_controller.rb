@@ -6,7 +6,6 @@ class RatingsController < ApplicationController
     @avg_rating = Rating.where("recipe_id = ?", params[:recipe_id]).average(:value).round(1)
 
     render :json => {
-      recipe = @recipe
       rating = @avg_rating
     }
   end

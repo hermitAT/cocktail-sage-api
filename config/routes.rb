@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :recipes do
       resources :ratings, only: [:create]
       resources :favorites, only: [:create, :destroy]
+      resources :comments, only: [:create, :destroy]
     end
   end
 end
