@@ -1,0 +1,2 @@
+class Funfact < ApplicationRecord
+end
