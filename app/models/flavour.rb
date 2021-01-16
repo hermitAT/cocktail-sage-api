@@ -1,0 +1,2 @@
+class Flavour < ApplicationRecord
+end

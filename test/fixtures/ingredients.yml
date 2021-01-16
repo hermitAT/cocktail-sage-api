@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image_url: MyString
+  strength: 1
+  flavour: one
+  category: one
+
+two:
+  name: MyString
+  image_url: MyString
+  strength: 1
+  flavour: two
+  category: two
