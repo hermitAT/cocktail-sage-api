@@ -1,4 +1,4 @@
-class RecipesController < ApplicationController
+class Api::RecipesController < Api::ApplicationController
 
   def index
     @recipes = Recipe.all.order(created_at: :desc)
@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find params[:recipe_id]
+    @recipe = Recipe.find(params[:id])
 
     render :json => {
       recipe: @recipe

@@ -1,4 +1,4 @@
-class IngredientsController < ApplicationController
+class Api::IngredientsController < Api::ApplicationController
 
   def index
     @ingredients = Ingredient.all
@@ -16,13 +16,13 @@ class IngredientsController < ApplicationController
     }
   end
 
-  def ingredients_search
+  def search
 
     if params.include :strength
       @ingredients = Ingredient.where("strength = ?", params[:strength])
-    else params.include :flavour_id
+    elsif params.include :flavour_id
       @ingredients = Ingredient.where("flavour_id = ?", params[:flavour_id])
-    else params.include :category_id
+    elsif params.include :category_id
       @ingredients = Ingredient.where("category_id = ?", params[:category_id])
     end
 
