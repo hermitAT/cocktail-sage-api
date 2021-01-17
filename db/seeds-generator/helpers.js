@@ -10,7 +10,7 @@ const capitalize = function(string) {
 }
 
 const randint = function(uplimit) {
-  return Math.round(Math.random() * uplimit)
+  return Math.round(Math.random() * (uplimit - 1) + 1)
 }
 
 const randArrElement = function(arr) {

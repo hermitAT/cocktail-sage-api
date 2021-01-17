@@ -78,17 +78,18 @@ function makeCategoriesAndIngredients() {
   for (const category in categoriesAndIngredients) {
 
     const category_var = `category_${category}`
-    output += `${category_var} = Category.create! name: "${capitalize(category)}"\n`
+    output += `${category_var} = Category.find_or_create_by! name: "${capitalize(category)}"\n`
 
     for (const ingredient in categoriesAndIngredients[category]) {
       output += `
 ${category_var}.ingredients.create!({
   name: "${capitalize(ingredient)}",
   description: description,
-  strength: ${categoriesAndIngredients[category][ingredient].strength}
+  strength: ${categoriesAndIngredients[category][ingredient].strength},
   flavour_id: ${randint(5)},
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
-})`;
+})
+`;
     }
   }
 

@@ -21,7 +21,7 @@ User.create!({
   name: "${first + ' ' + last}",
   email: "${email}",
   password: "password",
-  image_url: "https://avatars.dicebear.com/api/jdenticon/${first + last}.svg"
+  user_avatar: "https://avatars.dicebear.com/api/jdenticon/${first + last}.svg"
 })
 `
     }

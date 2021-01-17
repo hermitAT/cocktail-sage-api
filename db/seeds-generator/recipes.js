@@ -12,7 +12,7 @@ function makeRecipes(num) {
   const recipe_names3 = ['Mary', 'Beach', 'Sunrise', 'Vodka', 'Ray', 'Rock', 'Galaxy', 'Apple', 'Garden', 'Carrot', 'Broccoli']
 
   let output = `
-  instructions = "
+  instruction = "
   1. Pharetra convallis posuere morbi leo. Dis parturient montes nascetur ridiculus mus mauris.
   2. Adipiscing bibendum est ultricies integer quis auctor elit.
   3. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida.
@@ -24,7 +24,7 @@ function makeRecipes(num) {
     const recipe_name = `${rnd(recipe_names1)}${rnd(recipe_names2)}${rnd(recipe_names3)}`.trim();
 
     //Choose ingredients and amounts
-    let numOfIngs = randint(3) + 2;
+    let numOfIngs = randint(3) + 1;
     const ingredients = [];
     let totalStrength = 0
     let totalAmount = 0
@@ -34,12 +34,12 @@ function makeRecipes(num) {
     while (numOfIngs > 0) {
       ingCat = rnd(Object.keys(ingDB))
       ingName = rnd(Object.keys(ingDB[ingCat]))
-      const amount = randint(5) + 1;
+      const amount = randint(6);
       //ingredients.push({ [ingName]: { ...ingDB[ingCat][ingName], amount } })
       totalStrength += ingDB[ingCat][ingName].strength * amount
       totalAmount += amount
       
-      recipeIngs += `recipe_${count + 1}.recipes_ingredients.create!({ ingredient_id: Ingredient.find_by_name("${ingName}").id, amount = ${amount} })\n`
+      recipeIngs += `recipe_${count + 1}.recipe_ingredients.create!({ ingredient_id: Ingredient.find_by_name("${ingName}").id, amount: ${amount} })\n`
 
       numOfIngs--;
     }
@@ -50,7 +50,7 @@ function makeRecipes(num) {
     output += `
 recipe_${count + 1} = Recipe.create!({
   name: "${recipe_name}",
-  instructions: instructions,
+  instruction: instruction,
   result_strength: ${resultStrength},
   flavour_id: ${randint(5)},
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
