@@ -7,7 +7,7 @@ class UsersController < Api::ApplicationController
     @user = User.create(user_params)
     if @user.save
       render :json {
-        user:user
+        user :user
       }
     else
       render json: {
