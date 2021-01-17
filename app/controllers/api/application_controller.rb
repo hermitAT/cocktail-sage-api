@@ -2,8 +2,8 @@ class Api::ApplicationController < ActionController::API
 
   def index
     @funfact = Funfact.order('RANDOM()').first
-    @flavours = Flavour.all
-    @categories = Category.all
+    @flavours = Flavour.select(:name, :id).all
+    @categories = Category.select(:name, :id).all
     @cocktail_of_day = Recipe.order('RANDOM()').first
 
     render :json => {

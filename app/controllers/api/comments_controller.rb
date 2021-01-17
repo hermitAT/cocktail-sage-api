@@ -2,14 +2,24 @@ class Api::CommentsController < Api::ApplicationController
 
   def create
     @recipe = Recipe.find(params[:recipe_id])
-    @comment = Recipe.comments.create(comment_params)
+    @comment = @recipe.comments.create(comment_params)
 
     render :json => {
-      message: "Nice! Comment successfully added"
+      comment: @comment
     }
   end
 
   def destroy
+    @recipe = Recipe.find(params[:recipe_id])
+    @num_before = @recipe.comments.size
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    @num_after = @recipe.comments.size
+
+    render :json => {
+      num_before: @num_before,
+      num_after: @num_after
+    }
   end
 
   private
