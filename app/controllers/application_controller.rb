@@ -7,21 +7,10 @@ class ApplicationController < ActionController::API
     @cocktail_of_day = Recipe.order('RANDOM()').first
 
     render :json => {
-      funfact: @funfact
-      flavours: @flavours
-      categories: @categories
+      funfact: @funfact,
+      flavours: @flavours,
+      categories: @categories,
       recipes: [@cocktail_of_day]
     }
   end
-
-  private
-    def recipe_rating
-      recipes = Recipe.all
-      for recipes.each do |recipe|
-        ratings = Rating.where("recipe_id = ?", [recipe.id])
-        recipe.rating = ratings.reduce(:+) / ratings.size
-      end
-      recipes
-    end
-
 end

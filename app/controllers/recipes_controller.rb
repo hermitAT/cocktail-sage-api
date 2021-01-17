@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
 
   def index
-    @recipes = Recipe.all.order(:created_at: :desc)
+    @recipes = Recipe.all.order(created_at: :desc)
 
     render :json => {
       recipes: @recipes
@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
     @recipe.ingredients = @ingredients.map {|ingredient| Ingredient.find(ingredient.ingredient_id)}
 
     render :json => {
-      recipe: @recipe
+      recipe: @recipe,
       ingredients: @ingredients
     }
   end
@@ -30,8 +30,10 @@ class RecipesController < ApplicationController
   def search_recipes
     if params.include :flavour_id
       @recipes = Recipe.where("flavour_id = ?", params[:flavour_id])
+    end
     if params.include :parent_id
       @recipes = Recipe.where("parent_id = ?", params[:parent_id])
+    end
     if params.include :ingredient_id
       @recipe_ids = RecipeIngredient.select(:recipe_id).where("ingredient_id = ?", params[:ingredient_id])
       @recipes = @recipe_ids.map { |recipe_id| Recipe.find(recipe_id) }
@@ -58,7 +60,7 @@ class RecipesController < ApplicationController
 
     def ingredient_params
       params.reqire(:ingredient).permit(
-        :ingredient_id
+        :ingredient_id,
         :amount
       )
     end
