@@ -31,13 +31,12 @@ fs.writeFile('seeds/00_header.rb', seedsFileHeader(), function (err) {
     console.log('Saved Users!');
   }),
 
-
   fs.appendFile('seeds/03_categories_and_ingredients.rb', makeCategoriesAndIngredients(), function (err) {
     if (err) throw err;
     console.log('Saved Categories and Ingredients!');
   }),
 
-  fs.appendFile('seeds/04_recipes.rb', makeRecipes(recipes), function (err) {
+  fs.appendFile('seeds/04_recipes.rb', makeRecipes(recipes, users), function (err) {
     if (err) throw err;
     console.log('Saved Recipes and their relation to Ingredients!');
   }),
