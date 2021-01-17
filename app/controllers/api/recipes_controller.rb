@@ -1,10 +1,27 @@
+require '/vagrant/finals/cocktail-sage-api/app/helpers/paginator.rb'
 class Api::RecipesController < Api::ApplicationController
 
   def index
-    @recipes = Recipe.all.order(created_at: :desc)
+    #@recipes = Recipe.all.order(created_at: :desc)
+    @recipes_ids = Recipe.all.order(created_at: :desc).ids
+    @pages = paginate(@recipes_ids)
+    @current = @pages[1].map { |id| 
+      { recipe: Recipe.find(id),
+        rating: Rating.where(recipe_id: id).average(:value),
+        ingredients: RecipeIngredient.where(recipe_id: id).map { |ingredient|
+          { ingredient.ingredient_id => 
+            { Ingredient.find(ingredient.ingredient_id).name => ingredient.amount }
+          } 
+        },
+        comments: Comment.where(recipe_id: id),
+        users_favourited: Favorite.where(recipe_id: id).map {|favorite|
+          favorite.user_id }
+      }
+    }
+    @pages["current"] = @current
 
     render :json => {
-      recipes: @recipes
+      recipes: @pages
     }
   end
 
