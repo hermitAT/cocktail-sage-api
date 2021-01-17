@@ -9,9 +9,9 @@ Rails.application.routes.draw do
     post "users/login" => 'users#login'
     resources :ingredients, only: [:index, :show]
     resources :recipes do
-      resources :ratings, only: [:create]
+      resources :ratings, only: [:create, :update, :destroy]
       resources :favorites, only: [:create, :destroy]
-      resources :comments, only: [:create, :destroy]
+      resources :comments, only: [:create, :update, :destroy]
     end
   end
 end
