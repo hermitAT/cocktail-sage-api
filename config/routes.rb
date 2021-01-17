@@ -5,7 +5,8 @@ Rails.application.routes.draw do
     
     root to: 'application#index'
 
-    resources :users
+    resources :users, only: [:index, :show, :create]
+    post "users/login" => 'users#login'
     resources :ingredients, only: [:index, :show]
     resources :recipes do
       resources :ratings, only: [:create]
