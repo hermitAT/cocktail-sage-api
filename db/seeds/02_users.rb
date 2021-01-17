@@ -1,112 +1,80 @@
 
 User.create!({
-  name: "Olga Seagull",
-  email: "olga_seagull@goodmail.co",
+  name: "Anna Black",
+  email: "anna_black@sample.to",
   password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/OlgaSeagull.svg"
+  created_at: "2018-10-28 14:8:00",
+  user_avatar: "https://avatars.dicebear.com/api/jdenticon/AnnaBlack.svg"
 })
 
 User.create!({
-  name: "Jane Racoon",
-  email: "jane_racoon@example.ru",
+  name: "Jeff Edison",
+  email: "jeff_edison@sample.to",
   password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/JaneRacoon.svg"
+  created_at: "2017-11-26 16:23:00",
+  user_avatar: "https://avatars.dicebear.com/api/jdenticon/JeffEdison.svg"
 })
 
 User.create!({
-  name: "Olga Edison",
-  email: "olga_edison@example.co",
+  name: "Anna Einstein",
+  email: "anna_einstein@darkside.co",
   password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/OlgaEdison.svg"
+  created_at: "2019-9-14 3:30:00",
+  user_avatar: "https://avatars.dicebear.com/api/jdenticon/AnnaEinstein.svg"
 })
 
 User.create!({
-  name: "Tyler Bear",
-  email: "tyler_bear@goodmail.co",
+  name: "Olga White",
+  email: "olga_white@darkside.em",
   password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/TylerBear.svg"
-})
-
-User.create!({
-  name: "Anna Green",
-  email: "anna_green@darkside.org",
-  password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/AnnaGreen.svg"
-})
-
-User.create!({
-  name: "Anna Sikorski",
-  email: "anna_sikorski@example.em",
-  password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/AnnaSikorski.svg"
-})
-
-User.create!({
-  name: "Anna Maxwell",
-  email: "anna_maxwell@darkside.em",
-  password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/AnnaMaxwell.svg"
-})
-
-User.create!({
-  name: "Olga Green",
-  email: "olga_green@darkside.to",
-  password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/OlgaGreen.svg"
-})
-
-User.create!({
-  name: "Tyler Maxwell",
-  email: "tyler_maxwell@example.org",
-  password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/TylerMaxwell.svg"
-})
-
-User.create!({
-  name: "Tyler White",
-  email: "tyler_white@sample.su",
-  password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/TylerWhite.svg"
-})
-
-User.create!({
-  name: "Jeff Green",
-  email: "jeff_green@goodmail.com",
-  password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/JeffGreen.svg"
+  created_at: "2017-1-21 6:17:00",
+  user_avatar: "https://avatars.dicebear.com/api/jdenticon/OlgaWhite.svg"
 })
 
 User.create!({
   name: "Maria Edison",
-  email: "maria_edison@example.com",
+  email: "maria_edison@darkside.com",
   password: "password",
+  created_at: "2017-3-22 3:54:00",
   user_avatar: "https://avatars.dicebear.com/api/jdenticon/MariaEdison.svg"
 })
 
 User.create!({
-  name: "Anna Maxwell",
-  email: "anna_maxwell@goodmail.com",
+  name: "Jenifer Einstein",
+  email: "jenifer_einstein@darkside.org",
   password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/AnnaMaxwell.svg"
+  created_at: "2018-12-2 11:8:00",
+  user_avatar: "https://avatars.dicebear.com/api/jdenticon/JeniferEinstein.svg"
 })
 
 User.create!({
-  name: "Jenifer White",
-  email: "jenifer_white@example.su",
+  name: "Maria Edison",
+  email: "maria_edison@darkside.org",
   password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/JeniferWhite.svg"
+  created_at: "2017-5-24 9:20:00",
+  user_avatar: "https://avatars.dicebear.com/api/jdenticon/MariaEdison.svg"
 })
 
 User.create!({
-  name: "Morgan Seagull",
-  email: "morgan_seagull@sample.com",
+  name: "John Sikorski",
+  email: "john_sikorski@goodmail.em",
   password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/MorganSeagull.svg"
+  created_at: "2017-11-17 22:12:00",
+  user_avatar: "https://avatars.dicebear.com/api/jdenticon/JohnSikorski.svg"
 })
 
 User.create!({
-  name: "Olga Racoon",
-  email: "olga_racoon@darkside.org",
+  name: "John Maxwell",
+  email: "john_maxwell@sample.org",
   password: "password",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/OlgaRacoon.svg"
+  created_at: "2019-5-24 2:55:00",
+  user_avatar: "https://avatars.dicebear.com/api/jdenticon/JohnMaxwell.svg"
+})
+
+User.create!({
+  name: "John Racoon",
+  email: "john_racoon@darkside.ru",
+  password: "password",
+  created_at: "2019-12-4 12:6:00",
+  user_avatar: "https://avatars.dicebear.com/api/jdenticon/JohnRacoon.svg"
 })

@@ -77,12 +77,12 @@ function makeRecipes(num, users) {
     output += `
 recipe_${count + 1} = Recipe.create!({
   name: "${recipe_name}",
-  parent_id: ${(chance(25)) ? randint(num) : null}
+  parent_id: ${(chance(25)) ? randint(num) : 'nil'},
   result_strength: ${resultStrength},
-  created_at: ${generateTimestamp()}
+  created_at: "${generateTimestamp()}",
   flavour_id: ${randint(5)},
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png",
-  summary: ${rnd(summaries)}
+  summary: "${rnd(summaries)}",
   instruction: instruction,
   user_id: ${randint(users)}
 })
