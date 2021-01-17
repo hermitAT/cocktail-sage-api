@@ -10,3 +10,17 @@ def paginate(arr)
 end
 
 def get_recipes_full_data(ids)
+  ids.map { |id| 
+    { recipe: Recipe.find(id),
+      rating: Rating.where(recipe_id: id).average(:value),
+      ingredients: RecipeIngredient.where(recipe_id: id).map { |ingredient|
+        { ingredient.ingredient_id => 
+          { Ingredient.find(ingredient.ingredient_id).name => ingredient.amount }
+        } 
+      },
+      comments: Comment.where(recipe_id: id),
+      users_favourited: Favorite.where(recipe_id: id).map {|favorite|
+        favorite.user_id }
+    }
+  }
+end
