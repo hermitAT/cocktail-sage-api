@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     
     root to: 'application#index'
 
+    resources :users
     resources :ingredients, only: [:index, :show]
     resources :recipes do
       resources :ratings, only: [:create]

@@ -10,6 +10,18 @@ const rnd = function(arr) {
   return arr[index];
 };
 
+const generateTimestamp = function() {
+  const year = rnd(['2017', '2018', '2019']);
+  const month = Math.ceil(Math.random() * 12);
+  const day = Math.ceil(Math.random() * 28);
+  const hour = Math.ceil(Math.random() * 23);
+  const min = Math.ceil(Math.random() * 59);
+
+  //return new Date(`${year}-${month}-${day}:${hour}:${min}`);
+  return `${year}-${month}-${day} ${hour}:${min}:00`;
+
+}
+
 const makeUsers = function(num) {
   let output = ''
   for (let i = 0; i < num; i++) {
@@ -21,6 +33,7 @@ User.create!({
   name: "${first + ' ' + last}",
   email: "${email}",
   password: "password",
+  created_at: "${generateTimestamp()}",
   user_avatar: "https://avatars.dicebear.com/api/jdenticon/${first + last}.svg"
 })
 `
