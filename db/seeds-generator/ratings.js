@@ -12,7 +12,7 @@ const makeRatings = function(num, users, recipes) {
 
       if (!existing.includes(userRecipe)) {
         existing.push(userRecipe)
-        output += `Rating.create! ({ user_id: ${userID}, recipe_id: ${recipeID}, value: ${randint(4) + 1} })`
+        output += `\nRating.create! ({ user_id: ${userID}, recipe_id: ${recipeID}, value: ${randint(5)} })`
       };
     }
     return output;

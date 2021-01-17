@@ -1,6 +1,6 @@
 const { randint } = require('./helpers');
 
-const makeFavourites = function(num, users, recipes) {
+const makeFavorites = function(num, users, recipes) {
   let output = ` `;
     const existing = [];
 
@@ -12,11 +12,11 @@ const makeFavourites = function(num, users, recipes) {
 
       if (!existing.includes(userRecipe)) {
         existing.push(userRecipe)
-        output += `Favourite.create! ({ user_id: ${userID}, recipe_id: ${recipeID} })`
+        output += `\nFavorite.create! ({ user_id: ${userID}, recipe_id: ${recipeID} })`
       };
     }
     return output;
 }
 
-module.exports = { makeFavourites };
+module.exports = { makeFavorites };
 
