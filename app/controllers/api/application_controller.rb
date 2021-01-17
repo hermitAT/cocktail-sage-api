@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::API
+class Api::ApplicationController < ActionController::API
 
   def index
     @funfact = Funfact.order('RANDOM()').first

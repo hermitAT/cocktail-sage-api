@@ -1,4 +1,4 @@
-class RatingsController < ApplicationController
+class Api::RatingsController < ApplicationController
 
   def create
     @recipe = Recipe.find(params[:recipe_id])
