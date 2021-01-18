@@ -7,8 +7,9 @@ Rails.application.routes.draw do
 
     resources :users, only: [:index, :show, :create]
     post "users/login" => 'users#login'
+    get "ingredients/search" => 'ingredients#search'
     resources :ingredients, only: [:index, :show]
-    get "recipes/search" => 'recipes#search_recipes'
+    get "recipes/search" => 'recipes#search'
     resources :recipes do
       resources :ratings, only: [:create, :update, :destroy]
       resources :favorites, only: [:create, :destroy]

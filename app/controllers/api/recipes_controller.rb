@@ -29,7 +29,7 @@ class Api::RecipesController < Api::ApplicationController
     }
   end
 
-  def search_recipes
+  def search
     #if params.include :flavour_id
     #  @recipes = Recipe.where("flavour_id = ?", params[:flavour_id])
     #end
@@ -41,22 +41,10 @@ class Api::RecipesController < Api::ApplicationController
     #  @recipes = @recipe_ids.map { |recipe_id| Recipe.find(recipe_id) }
     #end
 
-    search_keys = params.keys
-    search_keys.delete('controller')
-    search_keys.delete('action')
-
-    #control_model_map = { recipes: Recipe }
-    model_name = params['controller'].split('/')[1]
-
-    result = {}
-    search_keys.each { |key|
-      result[key] = Recipe.where(key => params[key]).ids 
-    }
-
+    result = SearchHelper.search(params)
 
     render :json => {
       result: result,
-      params: params,
     }
   end
 
