@@ -1,10 +1,9 @@
-require '/vagrant/finals/cocktail-sage-api/app/helpers/paginator.rb'
 class Api::RecipesController < Api::ApplicationController
 
   def index
     @recipes_ids = Recipe.all.order(created_at: :desc).ids
-    @pages = paginate(@recipes_ids)
-    @pages["current_page"] = get_recipes_full_data(@pages[1])
+    @pages = RecipeHelper.paginate(@recipes_ids)
+    @pages["current_page"] = RecipeHelper.get_recipes_full_data(@pages[1])
 
     render :json => {
       recipes: @pages
