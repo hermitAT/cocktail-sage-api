@@ -2,12 +2,14 @@ class Api::FavoritesController < Api::ApplicationController
 
   def create
     @recipe = Recipe.find(params[:recipe_id])
+    @num_before = @recipe.favorites.size
     @favorite = @recipe.favorites.create(fav_params)
     @num_of_favs = @recipe.favorites.size
 
     render :json => {
       recipe: @recipe,
       favourite: @favourite,
+      num_before: @num_before,
       num_of_favs: @num_of_favs
     }
   end

@@ -11,7 +11,8 @@ class Api::RecipesController < Api::ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
+    #@recipe = Recipe.find(params[:id])
+    @recipe = RecipeHelper.get_recipes_full_data([params[:id]])
 
     render :json => {
       recipe: @recipe
