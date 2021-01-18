@@ -77,7 +77,7 @@ function makeRecipes(num, users) {
     output += `
 recipe_${count + 1} = Recipe.create!({
   name: "${recipe_name}",
-  parent_id: ${(chance(25)) ? randint(num) : 'nil'},
+  parent_id: ${(chance(25)) ? randint(num, count + 1) : 'nil'},
   result_strength: ${resultStrength},
   created_at: "${generateTimestamp()}",
   flavour_id: ${randint(5)},
@@ -95,5 +95,3 @@ ${recipeIngs}`;
 }
 
 module.exports = { makeRecipes }
-
-//console.log(makeRecipes(1))
