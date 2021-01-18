@@ -28,11 +28,13 @@ module SearchHelper
       }
     }
     relevance = occurence.sort_by { |a, b| -b }.to_h.keys
-    #strict = resu
+    strict = results.values.reduce { |intersection, array| intersection & array }
 
-    #if results.length == 0 return 'No results' end
-
-    { relevance: relevance, occurence: occurence }
+    if relevance.length + strict.length == 0
+      return 'No results found'
+    else 
+      return { relevance: relevance, strict: strict }
+    end
 
   end
 
