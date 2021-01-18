@@ -20,13 +20,20 @@ class Api::RecipesController < Api::ApplicationController
 
   def create
     @recipe = Recipe.create(recipe_params)
-    @ingredients = @recipe.recipe_ingredients.create(ingredient_params)
-    @recipe.ingredients = @ingredients.map {|ingredient| Ingredient.find(ingredient.ingredient_id)}
+    @recipe.recipe_ingredients.create([ingredients_params])
+    @total_strength = @recipe.recipe_ingredients.map { |i| Ingredient.find(i.ingredient_id).strength * i.amount }
+    @recipe.update_attribute(:result_strength, @total_strength.reduce(:+))
+    @full_recipe = RecipeHelper.get_recipes_full_data([@recipe.id])
 
     render :json => {
-      recipe: @recipe,
-      ingredients: @ingredients
+      recipe: @full_recipe
     }
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
   def search_recipes
@@ -56,14 +63,11 @@ class Api::RecipesController < Api::ApplicationController
         :user_id,
         :image_url,
         :summary,
-        :instructions,
+        :instruction
       )
     end
 
-    def ingredient_params
-      params.reqire(:ingredient).permit(
-        :ingredient_id,
-        :amount
-      )
+    def ingredients_params
+      params.permit(ingredients: [:ingredient_id, :amount]).require(:ingredients)
     end
 end
