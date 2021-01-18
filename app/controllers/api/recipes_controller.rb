@@ -30,19 +30,33 @@ class Api::RecipesController < Api::ApplicationController
   end
 
   def search_recipes
-    if params.include :flavour_id
-      @recipes = Recipe.where("flavour_id = ?", params[:flavour_id])
-    end
-    if params.include :parent_id
-      @recipes = Recipe.where("parent_id = ?", params[:parent_id])
-    end
-    if params.include :ingredient_id
-      @recipe_ids = RecipeIngredient.select(:recipe_id).where("ingredient_id = ?", params[:ingredient_id])
-      @recipes = @recipe_ids.map { |recipe_id| Recipe.find(recipe_id) }
-    end
+    #if params.include :flavour_id
+    #  @recipes = Recipe.where("flavour_id = ?", params[:flavour_id])
+    #end
+    #if params.include :parent_id
+    #  @recipes = Recipe.where("parent_id = ?", params[:parent_id])
+    #end
+    #if params.include :ingredient_id
+    #  @recipe_ids = RecipeIngredient.select(:recipe_id).where("ingredient_id = ?", params[:ingredient_id])
+    #  @recipes = @recipe_ids.map { |recipe_id| Recipe.find(recipe_id) }
+    #end
+
+    search_keys = params.keys
+    search_keys.delete('controller')
+    search_keys.delete('action')
+
+    #control_model_map = { recipes: Recipe }
+    model_name = params['controller'].split('/')[1]
+
+    result = {}
+    search_keys.each { |key|
+      result[key] = Recipe.where(key => params[key]).ids 
+    }
+
 
     render :json => {
-      recipes: @recipes
+      result: result,
+      params: params,
     }
   end
 
