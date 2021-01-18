@@ -20,27 +20,23 @@ class Api::RecipesController < Api::ApplicationController
 
   def create
     @recipe = Recipe.create(recipe_params)
-    @ingredients = @recipe.recipe_ingredients.create(ingredient_params)
-    @recipe.ingredients = @ingredients.map {|ingredient| Ingredient.find(ingredient.ingredient_id)}
+    @recipe.recipe_ingredients.create([ingredients_params])
+    @total_strength = @recipe.recipe_ingredients.map { |i| Ingredient.find(i.ingredient_id).strength * i.amount }
+    @recipe.update_attribute(:result_strength, @total_strength.reduce(:+))
+    @full_recipe = RecipeHelper.get_recipes_full_data([@recipe.id])
 
     render :json => {
-      recipe: @recipe,
-      ingredients: @ingredients
+      recipe: @full_recipe
     }
   end
 
-  def search
-    #if params.include :flavour_id
-    #  @recipes = Recipe.where("flavour_id = ?", params[:flavour_id])
-    #end
-    #if params.include :parent_id
-    #  @recipes = Recipe.where("parent_id = ?", params[:parent_id])
-    #end
-    #if params.include :ingredient_id
-    #  @recipe_ids = RecipeIngredient.select(:recipe_id).where("ingredient_id = ?", params[:ingredient_id])
-    #  @recipes = @recipe_ids.map { |recipe_id| Recipe.find(recipe_id) }
-    #end
+  def update
+  end
 
+  def destroy
+  end
+
+  def search
     result = SearchHelper.search(params)
 
     render :json => {
@@ -58,14 +54,11 @@ class Api::RecipesController < Api::ApplicationController
         :user_id,
         :image_url,
         :summary,
-        :instructions,
+        :instruction
       )
     end
 
-    def ingredient_params
-      params.reqire(:ingredient).permit(
-        :ingredient_id,
-        :amount
-      )
+    def ingredients_params
+      params.permit(ingredients: [:ingredient_id, :amount]).require(:ingredients)
     end
 end
