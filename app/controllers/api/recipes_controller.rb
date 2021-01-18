@@ -36,20 +36,11 @@ class Api::RecipesController < Api::ApplicationController
   def destroy
   end
 
-  def search_recipes
-    if params.include :flavour_id
-      @recipes = Recipe.where("flavour_id = ?", params[:flavour_id])
-    end
-    if params.include :parent_id
-      @recipes = Recipe.where("parent_id = ?", params[:parent_id])
-    end
-    if params.include :ingredient_id
-      @recipe_ids = RecipeIngredient.select(:recipe_id).where("ingredient_id = ?", params[:ingredient_id])
-      @recipes = @recipe_ids.map { |recipe_id| Recipe.find(recipe_id) }
-    end
+  def search
+    result = SearchHelper.search(params)
 
     render :json => {
-      recipes: @recipes
+      result: result,
     }
   end
 
