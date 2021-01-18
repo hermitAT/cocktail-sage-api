@@ -7,21 +7,32 @@ module SearchHelper
 
     controller_name = params['controller'].split('/')[1]
 
-    result = {}
+    results = {}
 
     if controller_name == 'recipes'
       search_keys.each { |key|
-        result[key] = Recipe.where(key => params[key]).ids 
+        results[key] = Recipe.where(key => params[key]).ids
       }
     end
 
     if controller_name == 'ingredients'
       search_keys.each { |key|
-        result[key] = Ingredient.where(key => params[key]).ids 
+        results[key] = Ingredient.where(key => params[key]).ids 
       }
     end
 
-    result
+    occurence = {}
+    results.keys.each { |search_key|
+      results[search_key].each { |id|
+        occurence.has_key?(id) ? occurence[id] += 1 : occurence[id] = 1
+      }
+    }
+    relevance = occurence.sort_by { |a, b| -b }.to_h.keys
+    #strict = resu
+
+    #if results.length == 0 return 'No results' end
+
+    { relevance: relevance, occurence: occurence }
 
   end
 
