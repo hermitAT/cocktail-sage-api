@@ -6,7 +6,6 @@ class Api::RatingsController < Api::ApplicationController
     @avg_rating = @recipe.ratings.average(:value).round(1)
 
     render :json => {
-      recipe: @recipe,
       rating: @rating,
       avg_rating: @avg_rating
     }
@@ -14,9 +13,12 @@ class Api::RatingsController < Api::ApplicationController
 
   def update
     @recipe = Recipe.find(params[:recipe_id])
-    @rating = @recipe.ratings.find(params[:id])
-    if @rating.user_id == params[:user_id]
+    @rating = @recipe.ratings.where("user_id = ?", params[:user_id]).first
+
+    if @rating
       @rating.update_attribute(:value, params[:value])
+
+      
       @avg_rating = @recipe.ratings.average(:value).round(1)
 
       render :json => {
@@ -32,10 +34,10 @@ class Api::RatingsController < Api::ApplicationController
 
   def destroy
     @recipe = Recipe.find(params[:recipe_id])
-    @rating = @recipe.ratings.find(params[:id])
+    @ratings = Rating.where("user_id = ? AND recipe_id = ?", params[:user_id], params[:recipe_id]).all
     
-    if @rating.user_id == params[:user_id]
-      @rating.destroy
+    if @ratings
+      @ratings.map { |r| r.destroy }
       @avg_rating = @recipe.ratings.average(:value).round(1)
 
       render :json => {

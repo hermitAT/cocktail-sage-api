@@ -3,12 +3,11 @@ class Api::FavoritesController < Api::ApplicationController
   def create
     @recipe = Recipe.find(params[:recipe_id])
     @num_before = @recipe.favorites.size
-    @favorite = @recipe.favorites.create(fav_params)
+    @favorite = Favorite.create(favorite_params)
     @num_of_favs = @recipe.favorites.size
 
     render :json => {
-      recipe: @recipe,
-      favourite: @favourite,
+      favorite: @favorite,
       num_before: @num_before,
       num_of_favs: @num_of_favs
     }
@@ -16,25 +15,26 @@ class Api::FavoritesController < Api::ApplicationController
 
   def destroy
     @recipe = Recipe.find(params[:recipe_id])
-    @favorite = @recipe.favorites.find(params[:id])
+    @favorites = Favorite.where("user_id = ? AND recipe_id = ?", params[:user_id], params[:recipe_id])
+    @num_before = @recipe.favorites.size
     
-    if @favorite.user_id == params[:user_id]
-      @favorite.destroy
+    if @favorites
+      @favorites.map { |f| f.destroy }
       @num_of_favs = @recipe.favorites.size
 
       render :json => {
-        recipe: @recipe,
+        num_before: @num_before,
         num_of_favs: @num_of_favs
       }
     else
       render :json => {
-        message: "Sorry, you don't have permission to destroy this favorite."
+        message: "Sorry, this recipe has not been favorited by that user!"
       }
     end
   end
 
   private
-    def fav_params
+    def favorite_params
       params.permit(:user_id, :recipe_id)
     end
 end
