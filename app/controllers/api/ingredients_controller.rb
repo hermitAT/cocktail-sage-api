@@ -19,19 +19,10 @@ class Api::IngredientsController < Api::ApplicationController
 
   def search
 
-    #if params.include :strength
-    #  @ingredients = Ingredient.where("strength = ?", params[:strength])
-    #elsif params.include :flavour_id
-    #  @ingredients = Ingredient.where("flavour_id = ?", params[:flavour_id])
-    #elsif params.include :category_id
-    #  @ingredients = Ingredient.where("category_id = ?", params[:category_id])
-    #end
-
     result = SearchHelper.search(params)
 
     render :json => {
       result: result,
-      #params: params
     }
   end
   
