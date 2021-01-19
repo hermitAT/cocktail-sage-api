@@ -14,7 +14,7 @@ category_spirits.ingredients.create!({
   name: "Gin",
   description: description,
   strength: 450,
-  flavour_id: 4,
+  flavour_id: 5,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -22,7 +22,7 @@ category_spirits.ingredients.create!({
   name: "Light Rum",
   description: description,
   strength: 300,
-  flavour_id: 4,
+  flavour_id: 1,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -30,7 +30,7 @@ category_spirits.ingredients.create!({
   name: "Gold Rum",
   description: description,
   strength: 450,
-  flavour_id: 3,
+  flavour_id: 2,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -38,7 +38,7 @@ category_spirits.ingredients.create!({
   name: "Dark Rum",
   description: description,
   strength: 350,
-  flavour_id: 5,
+  flavour_id: 2,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -46,7 +46,7 @@ category_spirits.ingredients.create!({
   name: "Spiced Rum",
   description: description,
   strength: 400,
-  flavour_id: 5,
+  flavour_id: 1,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -54,7 +54,7 @@ category_spirits.ingredients.create!({
   name: "Flavored Rum",
   description: description,
   strength: 350,
-  flavour_id: 1,
+  flavour_id: 5,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -62,7 +62,7 @@ category_spirits.ingredients.create!({
   name: "Tequila",
   description: description,
   strength: 450,
-  flavour_id: 3,
+  flavour_id: 4,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -70,7 +70,7 @@ category_spirits.ingredients.create!({
   name: "Vodka",
   description: description,
   strength: 400,
-  flavour_id: 2,
+  flavour_id: 3,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -78,7 +78,7 @@ category_spirits.ingredients.create!({
   name: "Whiskey",
   description: description,
   strength: 400,
-  flavour_id: 5,
+  flavour_id: 2,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -86,7 +86,7 @@ category_spirits.ingredients.create!({
   name: "Scotch",
   description: description,
   strength: 500,
-  flavour_id: 1,
+  flavour_id: 2,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -94,7 +94,7 @@ category_spirits.ingredients.create!({
   name: "Bourbon",
   description: description,
   strength: 450,
-  flavour_id: 4,
+  flavour_id: 2,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -102,7 +102,7 @@ category_spirits.ingredients.create!({
   name: "Rye",
   description: description,
   strength: 400,
-  flavour_id: 2,
+  flavour_id: 1,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 category_liquers = Category.find_or_create_by! name: "Liquers"
@@ -111,7 +111,7 @@ category_liquers.ingredients.create!({
   name: "Amaretto",
   description: description,
   strength: 250,
-  flavour_id: 2,
+  flavour_id: 3,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -119,7 +119,7 @@ category_liquers.ingredients.create!({
   name: "Aperol",
   description: description,
   strength: 110,
-  flavour_id: 5,
+  flavour_id: 2,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -135,7 +135,7 @@ category_liquers.ingredients.create!({
   name: "Campari",
   description: description,
   strength: 250,
-  flavour_id: 3,
+  flavour_id: 4,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -143,7 +143,7 @@ category_liquers.ingredients.create!({
   name: "Chambord",
   description: description,
   strength: 165,
-  flavour_id: 2,
+  flavour_id: 3,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -151,7 +151,7 @@ category_liquers.ingredients.create!({
   name: "Chartreuse",
   description: description,
   strength: 550,
-  flavour_id: 2,
+  flavour_id: 5,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -167,7 +167,7 @@ category_liquers.ingredients.create!({
   name: "Creme de Cacao",
   description: description,
   strength: 225,
-  flavour_id: 2,
+  flavour_id: 3,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -183,7 +183,7 @@ category_liquers.ingredients.create!({
   name: "Cynar",
   description: description,
   strength: 350,
-  flavour_id: 1,
+  flavour_id: 5,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -199,7 +199,7 @@ category_liquers.ingredients.create!({
   name: "Galliano",
   description: description,
   strength: 423,
-  flavour_id: 3,
+  flavour_id: 2,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -215,7 +215,7 @@ category_liquers.ingredients.create!({
   name: "Grand Marnier",
   description: description,
   strength: 400,
-  flavour_id: 2,
+  flavour_id: 4,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -231,7 +231,7 @@ category_liquers.ingredients.create!({
   name: "Kahlua",
   description: description,
   strength: 200,
-  flavour_id: 4,
+  flavour_id: 3,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -239,7 +239,7 @@ category_liquers.ingredients.create!({
   name: "Limoncello",
   description: description,
   strength: 285,
-  flavour_id: 3,
+  flavour_id: 1,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -247,7 +247,7 @@ category_liquers.ingredients.create!({
   name: "Southern Comfort",
   description: description,
   strength: 350,
-  flavour_id: 2,
+  flavour_id: 4,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -255,7 +255,7 @@ category_liquers.ingredients.create!({
   name: "Triple Sec",
   description: description,
   strength: 400,
-  flavour_id: 5,
+  flavour_id: 4,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 category_mixers = Category.find_or_create_by! name: "Mixers"
@@ -272,7 +272,7 @@ category_mixers.ingredients.create!({
   name: "Soda water",
   description: description,
   strength: 0,
-  flavour_id: 3,
+  flavour_id: 1,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -280,7 +280,7 @@ category_mixers.ingredients.create!({
   name: "Tonic water",
   description: description,
   strength: 0,
-  flavour_id: 2,
+  flavour_id: 5,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -296,7 +296,7 @@ category_mixers.ingredients.create!({
   name: "Lemon juice",
   description: description,
   strength: 0,
-  flavour_id: 1,
+  flavour_id: 2,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -304,7 +304,7 @@ category_mixers.ingredients.create!({
   name: "Lime juice",
   description: description,
   strength: 0,
-  flavour_id: 2,
+  flavour_id: 1,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -312,7 +312,7 @@ category_mixers.ingredients.create!({
   name: "Cranberry juice",
   description: description,
   strength: 0,
-  flavour_id: 5,
+  flavour_id: 3,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -320,7 +320,7 @@ category_mixers.ingredients.create!({
   name: "Orange juice",
   description: description,
   strength: 0,
-  flavour_id: 5,
+  flavour_id: 3,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -328,7 +328,7 @@ category_mixers.ingredients.create!({
   name: "Pineapple juice",
   description: description,
   strength: 0,
-  flavour_id: 2,
+  flavour_id: 1,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -344,7 +344,7 @@ category_mixers.ingredients.create!({
   name: "Sprite/7UP",
   description: description,
   strength: 0,
-  flavour_id: 4,
+  flavour_id: 2,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -360,7 +360,7 @@ category_mixers.ingredients.create!({
   name: "Grapefruit juice",
   description: description,
   strength: 0,
-  flavour_id: 1,
+  flavour_id: 4,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 category_grocery = Category.find_or_create_by! name: "Grocery"
@@ -369,7 +369,7 @@ category_grocery.ingredients.create!({
   name: "Milk",
   description: description,
   strength: 0,
-  flavour_id: 2,
+  flavour_id: 4,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -377,7 +377,7 @@ category_grocery.ingredients.create!({
   name: "Chocolate sauce",
   description: description,
   strength: 0,
-  flavour_id: 2,
+  flavour_id: 1,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -385,7 +385,7 @@ category_grocery.ingredients.create!({
   name: "Olives",
   description: description,
   strength: 0,
-  flavour_id: 3,
+  flavour_id: 5,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -409,7 +409,7 @@ category_grocery.ingredients.create!({
   name: "Clamato juice",
   description: description,
   strength: 0,
-  flavour_id: 4,
+  flavour_id: 2,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -417,7 +417,7 @@ category_grocery.ingredients.create!({
   name: "Tomato juice",
   description: description,
   strength: 0,
-  flavour_id: 3,
+  flavour_id: 5,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -425,7 +425,7 @@ category_grocery.ingredients.create!({
   name: "Whipped cream",
   description: description,
   strength: 0,
-  flavour_id: 2,
+  flavour_id: 4,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -433,7 +433,7 @@ category_grocery.ingredients.create!({
   name: "Hot sauce",
   description: description,
   strength: 0,
-  flavour_id: 4,
+  flavour_id: 5,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })
 
@@ -449,6 +449,6 @@ category_grocery.ingredients.create!({
   name: "Bitters",
   description: description,
   strength: 0,
-  flavour_id: 3,
+  flavour_id: 2,
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png"
 })

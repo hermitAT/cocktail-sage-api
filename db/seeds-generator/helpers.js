@@ -9,8 +9,12 @@ const capitalize = function(string) {
   return string[0].toUpperCase() + string.slice(1)
 }
 
-const randint = function(uplimit) {
-  return Math.round(Math.random() * (uplimit - 1) + 1)
+const randint = function(uplimit, skip = -1) {
+  let num = skip
+  while (num === skip) {  
+    num = Math.round(Math.random() * (uplimit - 1) + 1)
+  }
+  return num
 }
 
 const randArrElement = function(arr) {
@@ -19,7 +23,7 @@ const randArrElement = function(arr) {
 };
 
 const chance = function(num) {
-  return (Math.random * 100 < num) ? true : false
+  return (Math.random() * 100 < num) ? true : false
 }
 
 const randomObjectPair = function(object) {
