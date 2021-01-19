@@ -1,7 +1,8 @@
 class Api::IngredientsController < Api::ApplicationController
 
   def index
-    @ingredients = Ingredient.all
+    ids = Ingredient.all.ids
+    @ingredients = IngredientsHelper.get_ingredients_full_data(ids)
 
     render :json => {
       ingredients: @ingredients
@@ -9,7 +10,7 @@ class Api::IngredientsController < Api::ApplicationController
   end
 
   def show
-    @ingredient = Ingredient.find(params[:id])
+    @ingredient = IngredientsHelper.get_ingredients_full_data([params[:id]])
 
     render :json => {
       ingredient: @ingredient
