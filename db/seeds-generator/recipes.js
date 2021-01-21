@@ -25,21 +25,43 @@ function makeRecipes(num, users) {
     'Banh mi keffiyeh put a bird on it whatever quinoa venmo, actually chicharrones lyft'
   ];
 
-  const generateTimestamp = function() {
+  const generateTimestamp = function () {
     const year = rnd(['2020']);
     const month = Math.ceil(Math.random() * 5);
     const day = Math.ceil(Math.random() * 28);
     const hour = Math.ceil(Math.random() * 23);
     const min = Math.ceil(Math.random() * 59);
-  
+
     //return new Date(`${year}-${month}-${day}:${hour}:${min}`);
     return `${year}-${month}-${day} ${hour}:${min}:00`;
-  
+
   }
 
   const recipe_names1 = ['Easy', 'Old', 'Blue', 'Black', 'White', '', '', '', '', '', '', '']
   const recipe_names2 = [' Sparkling ', ' Shiny ', ' Gloomy ', ' Shady ', ' Ghosty ', ' Daring ', ' Disloyal ']
   const recipe_names3 = ['Mary', 'Beach', 'Sunrise', 'Vodka', 'Ray', 'Rock', 'Galaxy', 'Apple', 'Garden', 'Carrot', 'Broccoli']
+
+  const generateInstruction = function () {
+    const lines = [
+      '"Raclette williamsburg hell of normcore"',
+      '"Authentic roof party tacos bushwick"',
+      '"Poke synth literally aesthetic schlitz"',
+      '"Food truck direct trade lomo"',
+      '"Fashion axe organic vape hella celiac ugh"',
+      '"Bushwick cornhole pinterest migas disrupt"',
+      '"Mustache cronut cold-pressed, artisan banh mi"',
+      '"YOLO asymmetrical taxidermy, knausgaard semiotics"',
+      '"Sartorial polaroid drinking vinegar neutra"',
+      '"Kombucha blue bottle blog, mlkshk helvetica microdosing tbh"'
+    ]
+
+    const num = randint(4) + 2;
+    let output = [];
+    while (output.length < num) {
+      output.push(rnd(lines));
+    }
+    return output.join(', ');
+  }
 
   let output = `
   instruction = "
@@ -67,13 +89,13 @@ function makeRecipes(num, users) {
       const amount = randint(6);
       totalStrength += ingDB[ingCat][ingName].strength * amount
       totalAmount += amount
-      
+
       recipeIngs += `recipe_${count + 1}.recipe_ingredients.create!({ ingredient_id: Ingredient.find_by_name("${ingName}").id, amount: ${amount} })\n`
 
       numOfIngs--;
     }
     const resultStrength = Math.round(totalStrength / totalAmount)
-    
+
     output += `
 recipe_${count + 1} = Recipe.create!({
   name: "${recipe_name}",
@@ -83,7 +105,7 @@ recipe_${count + 1} = Recipe.create!({
   flavour_id: ${randint(5)},
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png",
   summary: "${rnd(summaries)}",
-  instruction: instruction,
+  instruction: [${generateInstruction()}],
   user_id: ${randint(users)}
 })
 ${recipeIngs}`;
