@@ -19,7 +19,17 @@ module RecipeHelper
             { Ingredient.find(ingredient.ingredient_id).name => ingredient.amount }
           } 
         },
-        comments: Comment.where(recipe_id: id),
+        comments: Comment.where(recipe_id: id).map { |comment|
+          { 
+            comment: comment,
+            user: {
+              id: comment.user_id,
+              name: User.find(comment.user_id).name,
+              user_avatar: User.find(comment.user_id).user_avatar
+            }
+            
+          }
+        },
         users_favourited: Favorite.where(recipe_id: id).map {|favorite|
           favorite.user_id }
       }
