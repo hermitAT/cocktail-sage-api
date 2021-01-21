@@ -37,13 +37,15 @@ class Api::UsersController < Api::ApplicationController
   end
 
   def show
-    @user_recipes = User.find_by(params[:user_id]).recipes
+    @user_recipes = User.find(params[:id]).recipes
     @recipes_id = @user_recipes.select('id')
-    @user_favorites = User.find_by(params[:user_id]).favorites
+    @user_favorites = User.find(params[:id]).favorites
     @favorites_id = @user_favorites.select('id')
+    @user = User.select(:id, :name, :user_avatar, :created_at).find(params[:id])
 
 
     render :json => {
+      user: @user,
       recipes_id: @recipes_id,
       favorites_id: @favorites_id  
     }
