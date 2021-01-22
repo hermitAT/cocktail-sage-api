@@ -21,7 +21,14 @@ class Api::RecipesController < Api::ApplicationController
 
   def create
     @recipe = Recipe.create(recipe_params)
-    @recipe.recipe_ingredients.create([ingredients_params])
+    @ingredients = ingredients_params.map { |i|
+      {
+        :ingredient_id => Ingredient.find_by_name(i[:name]).id,
+        :amount => i[:amount]
+      }
+    }
+    puts @ingredients
+    @recipe.recipe_ingredients.create(@ingredients)
 
     @total_strength = @recipe.recipe_ingredients.map { |i| Ingredient.find(i.ingredient_id).strength * i.amount }
     @total_amount = @recipe.recipe_ingredients.map{ |i| i.amount }.reduce(:+)
@@ -92,11 +99,11 @@ class Api::RecipesController < Api::ApplicationController
         :user_id,
         :image_url,
         :summary,
-        :instruction
+        :instruction => []
       )
     end
 
     def ingredients_params
-      params.permit(ingredients: [:ingredient_id, :amount]).require(:ingredients)
+      params.permit(ingredients: [:name, :amount]).require(:ingredients)
     end
 end
