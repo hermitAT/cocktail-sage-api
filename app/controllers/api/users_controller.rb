@@ -37,10 +37,11 @@ class Api::UsersController < Api::ApplicationController
   end
 
   def show
-    @user_recipes = User.find(params[:id]).recipes
-    @recipes_id = @user_recipes.select('id')
-    @user_favorites = User.find(params[:id]).favorites
-    @favorites_id = @user_favorites.select('id')
+
+    @recipes_id = Recipe.where(user_id: params[:id]).ids
+    @favorites_id = Favorite.where(user_id: params[:id]).map {|entry| 
+      entry[:recipe_id]
+    }
     @user = User.select(:id, :name, :user_avatar, :created_at).find(params[:id])
 
 
