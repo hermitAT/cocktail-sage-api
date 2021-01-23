@@ -73,9 +73,21 @@ module SearchHelper
     # Return message if no results
     if relevance.length + strict.length == 0
       return 'No results found'
-    else 
-      return { relevance: relevance, strict: strict }
+    end 
+    
+    
+    # Paginate results for strict and revevance categories separately
+    relevance_pages = {}
+    strict_pages = {}
+    if relevance.length != 0 
+      relevance_pages = RecipeHelper.paginate(relevance)
+      relevance_pages["current_page"] = RecipeHelper.get_recipes_full_data(relevance_pages[1])
     end
+    if strict_pages.length != 0 
+      strict_pages = RecipeHelper.paginate(relevance)
+      strict_pages["current_page"] = RecipeHelper.get_recipes_full_data(strict_pages[1])
+    end
+    return { relevance: relevance_pages, strict: strict_pages }
 
   end
 
