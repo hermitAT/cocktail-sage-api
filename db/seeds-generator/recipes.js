@@ -43,16 +43,16 @@ function makeRecipes(num, users) {
 
   const generateInstruction = function () {
     const lines = [
-      '"Raclette williamsburg hell of normcore"',
-      '"Authentic roof party tacos bushwick"',
-      '"Poke synth literally aesthetic schlitz"',
-      '"Food truck direct trade lomo"',
-      '"Fashion axe organic vape hella celiac ugh"',
-      '"Bushwick cornhole pinterest migas disrupt"',
-      '"Mustache cronut cold-pressed, artisan banh mi"',
-      '"YOLO asymmetrical taxidermy, knausgaard semiotics"',
-      '"Sartorial polaroid drinking vinegar neutra"',
-      '"Kombucha blue bottle blog, mlkshk helvetica microdosing tbh"'
+      'Raclette williamsburg hell of normcore',
+      'Authentic roof party tacos bushwick',
+      'Poke synth literally aesthetic schlitz',
+      'Food truck direct trade lomo',
+      'Fashion axe organic vape hella celiac ugh',
+      'Bushwick cornhole pinterest migas disrupt',
+      'Mustache cronut cold-pressed, artisan banh mi',
+      'YOLO asymmetrical taxidermy, knausgaard semiotics',
+      'Sartorial polaroid drinking vinegar neutra',
+      'Kombucha blue bottle blog, mlkshk helvetica microdosing tbh'
     ]
 
     const num = randint(4) + 2;
@@ -60,7 +60,7 @@ function makeRecipes(num, users) {
     while (output.length < num) {
       output.push(rnd(lines));
     }
-    return output.join(', ');
+    return output.join('. ');
   }
 
   let output = `
@@ -105,7 +105,7 @@ recipe_${count + 1} = Recipe.create!({
   flavour_id: ${randint(5)},
   image_url: "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hee/ha4/12034965241886.png",
   summary: "${rnd(summaries)}",
-  instruction: [${generateInstruction()}],
+  instruction: "${generateInstruction()}",
   user_id: ${randint(users)}
 })
 ${recipeIngs}`;
