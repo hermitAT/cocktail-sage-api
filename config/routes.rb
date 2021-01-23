@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get 'ingredients/search' => 'ingredients#search'
     resources :ingredients, only: [:index, :show]
     get 'recipes/search' => 'recipes#search'
+    get 'recipes/fetch' => 'recipes#fetch'
     resources :recipes do
 
       post 'ratings' => 'ratings#create'

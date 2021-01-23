@@ -10,6 +10,16 @@ class Api::RecipesController < Api::ApplicationController
     }
   end
 
+  def fetch
+    if request.headers[:ids].kind_of?(String)
+      ids = request.headers[:ids].tr("[]","").split(",").map { |elm| elm.strip.to_i }
+    else
+      ids = request.headers[:ids]
+    end
+
+    render :json => { recipes: RecipeHelper.get_recipes_full_data(ids) }
+  end
+
   def show
     #@recipe = Recipe.find(params[:id])
     @recipe = RecipeHelper.get_recipes_full_data([params[:id]])
@@ -18,6 +28,8 @@ class Api::RecipesController < Api::ApplicationController
       recipe: @recipe
     }
   end
+
+
 
   def create
     @recipe = Recipe.create(recipe_params)
