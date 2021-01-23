@@ -29,8 +29,6 @@ class Api::RecipesController < Api::ApplicationController
     }
   end
 
-
-
   def create
     @recipe = Recipe.create(recipe_params)
     @ingredients = ingredients_params.map { |i|
@@ -39,7 +37,6 @@ class Api::RecipesController < Api::ApplicationController
         :amount => i[:amount]
       }
     }
-    puts @ingredients
     @recipe.recipe_ingredients.create(@ingredients)
 
     @total_strength = @recipe.recipe_ingredients.map { |i| Ingredient.find(i.ingredient_id).strength * i.amount }
@@ -55,42 +52,37 @@ class Api::RecipesController < Api::ApplicationController
 
   def update
     @recipe = Recipe.find(params[:id])
-    if @recipe.user_id == params[:user_id]
-      @recipe.update_attributes(recipe_params)
+    @recipe.update_attributes(recipe_params)
 
-      @recipe.recipe_ingredients.all.map { |i| i.destroy }
-      @recipe.recipe_ingredients.create([ingredients_params])
+    @recipe.recipe_ingredients.all.map { |i| i.destroy }
+    @ingredients = ingredients_params.map { |i|
+      {
+        :ingredient_id => Ingredient.find_by_name(i[:name]).id,
+        :amount => i[:amount]
+      }
+    }
+    @recipe.recipe_ingredients.create(@ingredients)
 
-      @total_strength = @recipe.recipe_ingredients.map { |i| Ingredient.find(i.ingredient_id).strength * i.amount }
-      @total_amount = @recipe.recipe_ingredients.map{ |i| i.amount }.reduce(:+)
-      @recipe.update_attribute(:result_strength, @total_strength.reduce(:+) / @total_amount)
+    @total_strength = @recipe.recipe_ingredients.map { |i| Ingredient.find(i.ingredient_id).strength * i.amount }
+    @total_amount = @recipe.recipe_ingredients.map{ |i| i.amount }.reduce(:+)
+    @recipe.update_attribute(:result_strength, @total_strength.reduce(:+) / @total_amount)
       
-      @full_recipe = RecipeHelper.get_recipes_full_data([@recipe.id])
+    @full_recipe = RecipeHelper.get_recipes_full_data([@recipe.id])
 
-      render :json => {
-        recipe: @full_recipe
-      }
-    else
-      render :json => {
-        message: "Sorry, you don't permission to edit this recipe."
-      }
-    end
+    render :json => {
+      recipe: @full_recipe
+    }
   end
 
   def destroy
     @recipe = Recipe.find(params[:id])
-    if @recipe.user_id == params[:user_id]
-      @recipe.recipe_ingredients.all.map { |i| i.destroy }
-      @recipe.destroy
+    
+    @recipe.recipe_ingredients.all.map { |i| i.destroy }
+    @recipe.destroy
 
-      render :json => {
-        message: "Success! Recipe deleted."
-      }
-    else
-      render :json => {
-        message: "Sorry, you do not have permission to delete this recipe."
-      }
-    end
+    render :json => {
+      message: "Success! Recipe deleted."
+    }
   end
 
   def search
@@ -101,7 +93,6 @@ class Api::RecipesController < Api::ApplicationController
     }
   end
 
-
   private
     def recipe_params
       params.require(:recipe).permit(
@@ -111,7 +102,7 @@ class Api::RecipesController < Api::ApplicationController
         :user_id,
         :image_url,
         :summary,
-        :instruction => []
+        :instruction
       )
     end
 
