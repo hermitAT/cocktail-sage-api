@@ -1,6 +1,6 @@
 module RecipeHelper
   def self.paginate(arr)
-    num_of_pages = (arr.length / 10.0).ceil
+    num_of_pages = (arr.length / 4.0).ceil
     page = 1
     pages = {}
     while (page <= num_of_pages) do
