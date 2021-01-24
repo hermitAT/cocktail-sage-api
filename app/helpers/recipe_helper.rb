@@ -19,7 +19,7 @@ module RecipeHelper
             { Ingredient.find(ingredient.ingredient_id).name => ingredient.amount }
           } 
         },
-        comments: Comment.where(recipe_id: id).map { |comment|
+        comments: Comment.where(recipe_id: id).order(created_at: :desc).map { |comment|
           { 
             comment: comment,
             user: {
