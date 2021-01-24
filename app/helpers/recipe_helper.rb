@@ -4,7 +4,7 @@ module RecipeHelper
     page = 1
     pages = {}
     while (page <= num_of_pages) do
-      pages[page] = arr.slice(0 + 10 * (page - 1), 10)
+      pages[page] = arr.slice(0 + 4 * (page - 1), 4)
       page += 1
     end
     pages
