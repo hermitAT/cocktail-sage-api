@@ -34,7 +34,7 @@ User.create!({
   email: "${email}",
   password: "password",
   created_at: "${generateTimestamp()}",
-  user_avatar: "https://avatars.dicebear.com/api/jdenticon/${first + last}.svg"
+  user_avatar: "https://avatars.dicebear.com/api/bottts/${first + last}.svg"
 })
 `
     }

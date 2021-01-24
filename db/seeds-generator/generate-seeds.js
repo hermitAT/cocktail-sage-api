@@ -10,7 +10,7 @@ const { makeFavorites } = require('./favorites');
 const { makeComments } = require('./comments');
 const { makeFunFacts } = require('./fun_facts');
 
-const users = 10;
+const users = 40;
 const recipes = users * 10;
 const comments = recipes * users / 4;
 const favorites = recipes * users / 4;
