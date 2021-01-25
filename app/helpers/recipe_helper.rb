@@ -13,6 +13,7 @@ module RecipeHelper
   def self.get_recipes_full_data(ids)
     ids.map { |id| 
       { recipe: Recipe.find(id),
+        parent: Recipe.find(id)[:parent_id] && Recipe.find(Recipe.find(id)[:parent_id]).name,
         rating: Rating.where(recipe_id: id).average(:value),
         ingredients: RecipeIngredient.where(recipe_id: id).map { |ingredient|
           { ingredient.ingredient_id => 
