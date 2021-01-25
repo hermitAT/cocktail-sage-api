@@ -6,7 +6,7 @@ category_spirits.ingredients.create!({
   name: "Bourbon",
   description: description,
   strength: 450,
-  flavour_id: 2,
+  flavour_id: 4,
   image_url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/wolf-moon-bourbon-1602776744.jpg"
 })
 
@@ -14,7 +14,7 @@ category_spirits.ingredients.create!({
   name: "Brandy",
   description: description,
   strength: 450,
-  flavour_id: 3,
+  flavour_id: 5,
   image_url: "https://cdn2.bigcommerce.com/server5500/tpbc2s65/products/1326/images/1359/stockvsop1Lnew__75434__48694.1500051756.1280.1280.jpg?c=2"
 })
 
@@ -22,7 +22,7 @@ category_spirits.ingredients.create!({
   name: "Gin",
   description: description,
   strength: 450,
-  flavour_id: 4,
+  flavour_id: 2,
   image_url: "https://cdn.shoplightspeed.com/shops/610882/files/9623928/950x950x2/dry-gin-7-750ml.jpg"
 })
 
@@ -30,7 +30,7 @@ category_spirits.ingredients.create!({
   name: "Dark Rum",
   description: description,
   strength: 350,
-  flavour_id: 5,
+  flavour_id: 3,
   image_url: "https://assets.sainsburys-groceries.co.uk/gol/1302622/1/640x640.jpg"
 })
 
@@ -46,7 +46,7 @@ category_spirits.ingredients.create!({
   name: "Gold Rum",
   description: description,
   strength: 450,
-  flavour_id: 3,
+  flavour_id: 2,
   image_url: "https://austin-liquors.com/wp-content/uploads/2019/10/Bacardi-Gold-Rum-austin-liquors.jpg"
 })
 
@@ -54,7 +54,7 @@ category_spirits.ingredients.create!({
   name: "Light Rum",
   description: description,
   strength: 300,
-  flavour_id: 4,
+  flavour_id: 2,
   image_url: "https://www.clarkescourtrum.com/images/products/superior-light-rum/Superior-Light-Rum.jpg"
 })
 
@@ -62,7 +62,7 @@ category_spirits.ingredients.create!({
   name: "Spiced Rum",
   description: description,
   strength: 400,
-  flavour_id: 2,
+  flavour_id: 1,
   image_url: "https://produits.bienmanger.com/36342-0w600h600_Captain_Morgan_Spiced_Rum_From_The_Carabbean.jpg"
 })
 
@@ -94,7 +94,7 @@ category_spirits.ingredients.create!({
   name: "Vodka",
   description: description,
   strength: 400,
-  flavour_id: 2,
+  flavour_id: 4,
   image_url: "https://media-verticommnetwork1.netdna-ssl.com/wines/absolut-vodka-350ml-1195115.jpg"
 })
 
@@ -102,7 +102,7 @@ category_spirits.ingredients.create!({
   name: "Whiskey",
   description: description,
   strength: 400,
-  flavour_id: 2,
+  flavour_id: 4,
   image_url: "https://redbottle.com.au/wp-content/uploads/2019/11/Jack-Daniels-717.jpg"
 })
 category_liquers = Category.find_or_create_by! name: "Liquers"
@@ -111,7 +111,7 @@ category_liquers.ingredients.create!({
   name: "Amaretto",
   description: description,
   strength: 250,
-  flavour_id: 2,
+  flavour_id: 5,
   image_url: "https://www.drinksupermarket.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/m/amaretto-di-antonio-italian-almond-liqueur-70cl.jpg"
 })
 
@@ -119,7 +119,7 @@ category_liquers.ingredients.create!({
   name: "Aperol",
   description: description,
   strength: 110,
-  flavour_id: 3,
+  flavour_id: 4,
   image_url: "https://cdn.shopify.com/s/files/1/1351/8119/products/Aperol_DSC_2482_1500x1500.jpg?v=1602289884"
 })
 
@@ -127,7 +127,7 @@ category_liquers.ingredients.create!({
   name: "Benedictine",
   description: description,
   strength: 400,
-  flavour_id: 3,
+  flavour_id: 4,
   image_url: "https://www.cwspirits.com/media/catalog/product/cache/d6b455d3cae0b752f31861d86730a658/d/o/dom_benedictine_liqueur_750ml.jpg"
 })
 
@@ -135,7 +135,7 @@ category_liquers.ingredients.create!({
   name: "Campari",
   description: description,
   strength: 250,
-  flavour_id: 4,
+  flavour_id: 2,
   image_url: "https://drinkscouture.com/wp-content/uploads/2018/12/Campari-20CL.jpg"
 })
 
@@ -151,7 +151,7 @@ category_liquers.ingredients.create!({
   name: "Cointreau",
   description: description,
   strength: 400,
-  flavour_id: 4,
+  flavour_id: 1,
   image_url: "https://cdn.shopify.com/s/files/1/1569/9643/products/cointreau-triple-sec-orange-liqueur_grande.jpg?v=1588276743"
 })
 
@@ -159,7 +159,7 @@ category_liquers.ingredients.create!({
   name: "Cynar",
   description: description,
   strength: 350,
-  flavour_id: 2,
+  flavour_id: 4,
   image_url: "https://cdn.shopify.com/s/files/1/0094/4612/9719/products/Cynar_btl__700ml.jpg?v=1568010866"
 })
 
@@ -167,7 +167,7 @@ category_liquers.ingredients.create!({
   name: "Frangelico",
   description: description,
   strength: 200,
-  flavour_id: 5,
+  flavour_id: 4,
   image_url: "https://ww1.valuecellars.com.au/files/2016/05/8004160660304-0.png"
 })
 
@@ -175,7 +175,7 @@ category_liquers.ingredients.create!({
   name: "Galliano",
   description: description,
   strength: 423,
-  flavour_id: 1,
+  flavour_id: 3,
   image_url: "https://www.drinksupermarket.com/media/catalog/product/g/a/galliano_vanilla_liqueur_50cl.jpg"
 })
 
@@ -183,7 +183,7 @@ category_liquers.ingredients.create!({
   name: "Goldschlager",
   description: description,
   strength: 435,
-  flavour_id: 2,
+  flavour_id: 4,
   image_url: "https://www.abc.virginia.gov/library/product-images/schnapps/spice/goldschlager-schnapps.jpg?h=400&w=400&la=en&hash=A3C5B64A4EF26ECE010E895DFEB9465A88B26BF4"
 })
 
@@ -191,7 +191,7 @@ category_liquers.ingredients.create!({
   name: "Jagermeister",
   description: description,
   strength: 350,
-  flavour_id: 2,
+  flavour_id: 1,
   image_url: "https://assets.sainsburys-groceries.co.uk/gol/7587899/1/640x640.jpg"
 })
 
@@ -199,7 +199,7 @@ category_liquers.ingredients.create!({
   name: "Kahlua",
   description: description,
   strength: 200,
-  flavour_id: 2,
+  flavour_id: 5,
   image_url: "https://cutpcdnwimages.azureedge.net/images/products/875000/878182-600x600-A.jpg"
 })
 
@@ -207,7 +207,7 @@ category_liquers.ingredients.create!({
   name: "Limoncello",
   description: description,
   strength: 285,
-  flavour_id: 1,
+  flavour_id: 3,
   image_url: "https://cdn.shoplightspeed.com/shops/610882/files/9879613/950x950x2/limoncello-375ml.jpg"
 })
 
@@ -224,7 +224,7 @@ category_mixers.ingredients.create!({
   name: "Cola",
   description: description,
   strength: 0,
-  flavour_id: 3,
+  flavour_id: 2,
   image_url: "https://www.kroger.com/product/images/large/front/0004900000463"
 })
 
@@ -232,7 +232,7 @@ category_mixers.ingredients.create!({
   name: "Cranberry juice",
   description: description,
   strength: 0,
-  flavour_id: 5,
+  flavour_id: 1,
   image_url: "https://cranberry.ca/wp-content/uploads/2020/04/cranberry-juice.jpg"
 })
 
@@ -240,7 +240,7 @@ category_mixers.ingredients.create!({
   name: "Ginger ale",
   description: description,
   strength: 5,
-  flavour_id: 3,
+  flavour_id: 5,
   image_url: "https://www.theimpulsivebuy.com/wordpress/wp-content/uploads/2020/02/Canada-Dry-Bold-Ginger-Ale-Can.jpeg"
 })
 
@@ -264,7 +264,7 @@ category_mixers.ingredients.create!({
   name: "Lemon juice",
   description: description,
   strength: 0,
-  flavour_id: 2,
+  flavour_id: 5,
   image_url: "https://images.heb.com/is/image/HEBGrocery/002243408"
 })
 
@@ -272,7 +272,7 @@ category_mixers.ingredients.create!({
   name: "Lemonade",
   description: description,
   strength: 0,
-  flavour_id: 2,
+  flavour_id: 3,
   image_url: "https://d2d8wwwkmhfcva.cloudfront.net/800x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_ed554868-b018-4273-b1d6-4137ec653a63.png"
 })
 
@@ -280,7 +280,7 @@ category_mixers.ingredients.create!({
   name: "Lime juice",
   description: description,
   strength: 0,
-  flavour_id: 4,
+  flavour_id: 5,
   image_url: "https://media.healthyfood.com/wp-content/uploads/2017/03/How-to-choose-fruit-juices-and-drinks-500x500.jpg"
 })
 
@@ -288,7 +288,7 @@ category_mixers.ingredients.create!({
   name: "Orange juice",
   description: description,
   strength: 0,
-  flavour_id: 5,
+  flavour_id: 2,
   image_url: "https://media.healthyfood.com/wp-content/uploads/2017/03/How-to-choose-fruit-juices-and-drinks-500x500.jpg"
 })
 
@@ -329,7 +329,7 @@ category_grocery.ingredients.create!({
   name: "Bitters",
   description: description,
   strength: 0,
-  flavour_id: 2,
+  flavour_id: 1,
   image_url: "https://az836796.vo.msecnd.net/media/image/product/en/large/0007549600100.jpg"
 })
 
@@ -337,7 +337,7 @@ category_grocery.ingredients.create!({
   name: "Chocolate sauce",
   description: description,
   strength: 0,
-  flavour_id: 4,
+  flavour_id: 2,
   image_url: "https://cdnimg.webstaurantstore.com/images/products/large/177481/2111073.jpg"
 })
 
@@ -345,7 +345,7 @@ category_grocery.ingredients.create!({
   name: "Clamato juice",
   description: description,
   strength: 0,
-  flavour_id: 3,
+  flavour_id: 4,
   image_url: "https://www.londondrugs.com/on/demandware.static/-/Sites-londondrugs-master/default/dw1359161c/products/L1081660/large/L1081660.JPG"
 })
 
@@ -353,7 +353,7 @@ category_grocery.ingredients.create!({
   name: "Egg whites",
   description: description,
   strength: 0,
-  flavour_id: 2,
+  flavour_id: 3,
   image_url: "https://d2do16n8g6j4gd.cloudfront.net/styles/800px_wide/s3/products/images/2018/1/1_1296.jpg?9v4wiw2gDbomxhJOZ5busSz2kf6.KIkJ&itok=Cm01hrBe"
 })
 
@@ -361,7 +361,7 @@ category_grocery.ingredients.create!({
   name: "Grenadine",
   description: description,
   strength: 0,
-  flavour_id: 5,
+  flavour_id: 3,
   image_url: "https://images-na.ssl-images-amazon.com/images/I/71cJvvR82nL._AC_UL600_SR600,600_.jpg"
 })
 
@@ -369,7 +369,7 @@ category_grocery.ingredients.create!({
   name: "Hot sauce",
   description: description,
   strength: 0,
-  flavour_id: 4,
+  flavour_id: 5,
   image_url: "https://cdnimg.webstaurantstore.com/images/products/large/302711/1877595.jpg"
 })
 
@@ -377,7 +377,7 @@ category_grocery.ingredients.create!({
   name: "Milk",
   description: description,
   strength: 0,
-  flavour_id: 2,
+  flavour_id: 3,
   image_url: "https://i5.walmartimages.ca/images/Large/190/850/190850.jpg"
 })
 
@@ -385,7 +385,7 @@ category_grocery.ingredients.create!({
   name: "Olives",
   description: description,
   strength: 0,
-  flavour_id: 1,
+  flavour_id: 4,
   image_url: "https://s.cornershopapp.com/product-images/552172.jpg?versionId=0pwZ9C4BedH9tVIr8SsdbosGxtwUXZOM"
 })
 
@@ -393,7 +393,7 @@ category_grocery.ingredients.create!({
   name: "Tomato juice",
   description: description,
   strength: 0,
-  flavour_id: 3,
+  flavour_id: 1,
   image_url: "https://images-na.ssl-images-amazon.com/images/I/814waS64IsL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg"
 })
 
@@ -401,6 +401,6 @@ category_grocery.ingredients.create!({
   name: "Whipped cream",
   description: description,
   strength: 0,
-  flavour_id: 5,
+  flavour_id: 4,
   image_url: "https://assets.shop.loblaws.ca/products_jpeg/20048223001/en/20048223001_lrg_1_@1x.jpg"
 })

@@ -1,120 +1,120 @@
 
 User.create!({
-  name: "John Bear",
-  email: "john_bear@darkside.org",
+  name: "Jenifer Black",
+  email: "jenifer_black@sample.ru",
   password: "password",
-  created_at: "2019-12-4 17:4:00",
+  created_at: "2017-9-27 10:16:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/JeniferBlack.svg"
+})
+
+User.create!({
+  name: "John Bear",
+  email: "john_bear@sample.com",
+  password: "password",
+  created_at: "2017-11-8 9:41:00",
   user_avatar: "https://avatars.dicebear.com/api/bottts/JohnBear.svg"
 })
 
 User.create!({
-  name: "Jenifer Green",
-  email: "jenifer_green@sample.em",
+  name: "Jenifer Seagull",
+  email: "jenifer_seagull@goodmail.to",
   password: "password",
-  created_at: "2017-4-6 23:36:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/JeniferGreen.svg"
+  created_at: "2018-2-9 14:14:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/JeniferSeagull.svg"
 })
 
 User.create!({
-  name: "Jane Racoon",
-  email: "jane_racoon@goodmail.su",
+  name: "Jane Seagull",
+  email: "jane_seagull@goodmail.to",
   password: "password",
-  created_at: "2019-3-2 16:37:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/JaneRacoon.svg"
+  created_at: "2018-11-28 5:26:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/JaneSeagull.svg"
+})
+
+User.create!({
+  name: "Olga Black",
+  email: "olga_black@example.em",
+  password: "password",
+  created_at: "2017-4-11 10:54:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/OlgaBlack.svg"
+})
+
+User.create!({
+  name: "Anna Einstein",
+  email: "anna_einstein@goodmail.ru",
+  password: "password",
+  created_at: "2018-11-25 19:19:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/AnnaEinstein.svg"
+})
+
+User.create!({
+  name: "Anna Racoon",
+  email: "anna_racoon@sample.ru",
+  password: "password",
+  created_at: "2019-10-10 10:2:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/AnnaRacoon.svg"
+})
+
+User.create!({
+  name: "Tyler Edison",
+  email: "tyler_edison@sample.ru",
+  password: "password",
+  created_at: "2017-4-4 13:57:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/TylerEdison.svg"
+})
+
+User.create!({
+  name: "Maria Bear",
+  email: "maria_bear@goodmail.com",
+  password: "password",
+  created_at: "2017-11-20 7:38:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/MariaBear.svg"
+})
+
+User.create!({
+  name: "Anna Bear",
+  email: "anna_bear@sample.to",
+  password: "password",
+  created_at: "2018-9-17 14:4:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/AnnaBear.svg"
+})
+
+User.create!({
+  name: "Anna White",
+  email: "anna_white@example.to",
+  password: "password",
+  created_at: "2017-10-8 7:53:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/AnnaWhite.svg"
+})
+
+User.create!({
+  name: "Jane Seagull",
+  email: "jane_seagull@example.org",
+  password: "password",
+  created_at: "2017-7-13 1:52:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/JaneSeagull.svg"
+})
+
+User.create!({
+  name: "Morgan Maxwell",
+  email: "morgan_maxwell@darkside.org",
+  password: "password",
+  created_at: "2017-6-14 6:11:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/MorganMaxwell.svg"
 })
 
 User.create!({
   name: "Morgan Seagull",
-  email: "morgan_seagull@darkside.com",
+  email: "morgan_seagull@darkside.co",
   password: "password",
-  created_at: "2018-4-28 21:57:00",
+  created_at: "2018-12-28 2:29:00",
   user_avatar: "https://avatars.dicebear.com/api/bottts/MorganSeagull.svg"
 })
 
 User.create!({
-  name: "Jeff Edison",
-  email: "jeff_edison@example.em",
+  name: "Jenifer Seagull",
+  email: "jenifer_seagull@darkside.to",
   password: "password",
-  created_at: "2017-7-15 18:45:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/JeffEdison.svg"
-})
-
-User.create!({
-  name: "Maria Racoon",
-  email: "maria_racoon@example.org",
-  password: "password",
-  created_at: "2018-10-17 19:27:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/MariaRacoon.svg"
-})
-
-User.create!({
-  name: "Morgan Black",
-  email: "morgan_black@goodmail.org",
-  password: "password",
-  created_at: "2017-2-19 8:56:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/MorganBlack.svg"
-})
-
-User.create!({
-  name: "Maria White",
-  email: "maria_white@darkside.em",
-  password: "password",
-  created_at: "2017-6-21 10:26:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/MariaWhite.svg"
-})
-
-User.create!({
-  name: "Tyler Einstein",
-  email: "tyler_einstein@goodmail.to",
-  password: "password",
-  created_at: "2017-3-23 14:19:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/TylerEinstein.svg"
-})
-
-User.create!({
-  name: "Jeff Black",
-  email: "jeff_black@sample.co",
-  password: "password",
-  created_at: "2017-5-19 16:46:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/JeffBlack.svg"
-})
-
-User.create!({
-  name: "Morgan Black",
-  email: "morgan_black@goodmail.em",
-  password: "password",
-  created_at: "2017-1-26 20:4:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/MorganBlack.svg"
-})
-
-User.create!({
-  name: "Tyler Edison",
-  email: "tyler_edison@darkside.em",
-  password: "password",
-  created_at: "2017-11-6 23:5:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/TylerEdison.svg"
-})
-
-User.create!({
-  name: "Jeff White",
-  email: "jeff_white@sample.co",
-  password: "password",
-  created_at: "2017-8-5 18:2:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/JeffWhite.svg"
-})
-
-User.create!({
-  name: "Anna Seagull",
-  email: "anna_seagull@example.em",
-  password: "password",
-  created_at: "2017-2-28 19:49:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/AnnaSeagull.svg"
-})
-
-User.create!({
-  name: "Tyler Edison",
-  email: "tyler_edison@example.co",
-  password: "password",
-  created_at: "2017-7-2 1:29:00",
-  user_avatar: "https://avatars.dicebear.com/api/bottts/TylerEdison.svg"
+  created_at: "2019-7-20 2:21:00",
+  user_avatar: "https://avatars.dicebear.com/api/bottts/JeniferSeagull.svg"
 })
