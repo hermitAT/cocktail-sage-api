@@ -41,14 +41,12 @@ class Api::UsersController < Api::ApplicationController
     @recipes_id = Recipe.where(user_id: params[:id]).ids
     @my_recipes = RecipeHelper.paginate(@recipes_id)
     @my_recipes['current_page'] = RecipeHelper.get_recipes_full_data(@my_recipes[1])
-    @my_recipes['count'] = @recipes_id.length
 
     @favorites_id = Favorite.where(user_id: params[:id]).map {|entry| 
       entry[:recipe_id]
     }
     @my_favorites = RecipeHelper.paginate(@favorites_id)
     @my_favorites['current_page'] = RecipeHelper.get_recipes_full_data(@my_favorites[1])
-    @my_favorites['count'] = @favorites_id.length
 
     @user = User.select(:id, :name, :user_avatar, :created_at).find(params[:id])
 

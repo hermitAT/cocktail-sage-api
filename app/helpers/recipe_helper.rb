@@ -15,6 +15,7 @@ module RecipeHelper
       { recipe: Recipe.find(id),
         parent: Recipe.find(id)[:parent_id] && Recipe.find(Recipe.find(id)[:parent_id]).name,
         rating: Rating.where(recipe_id: id).average(:value),
+        users_rated: Rating.where(recipe_id: id).select(:user_id).count,
         ingredients: RecipeIngredient.where(recipe_id: id).map { |ingredient|
           { ingredient.ingredient_id => 
             { Ingredient.find(ingredient.ingredient_id).name => ingredient.amount }

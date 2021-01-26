@@ -13,7 +13,7 @@ const { makeFunFacts } = require('./fun_facts');
 const users = 15;
 const recipes = users * 10;
 const comments = recipes * users / 4;
-const favorites = recipes * users / 4;
+const favorites = recipes * users / 16;
 const ratings = recipes * users / 4;
 
 
