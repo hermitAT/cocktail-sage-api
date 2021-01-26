@@ -16,7 +16,7 @@ const categoriesAndIngredients = {
     "Vodka": { strength: 400, image_url: 'https://media-verticommnetwork1.netdna-ssl.com/wines/absolut-vodka-350ml-1195115.jpg' },
     "Whiskey": { strength: 400, image_url: 'https://redbottle.com.au/wp-content/uploads/2019/11/Jack-Daniels-717.jpg' }
   },
-  liquers: {
+  liqueurs: {
     "Amaretto": { strength: 250, image_url: 'https://www.drinksupermarket.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/m/amaretto-di-antonio-italian-almond-liqueur-70cl.jpg' },
     "Aperol": { strength: 110, image_url: 'https://cdn.shopify.com/s/files/1/1351/8119/products/Aperol_DSC_2482_1500x1500.jpg?v=1602289884' },
     "Benedictine": { strength: 400, image_url: 'https://www.cwspirits.com/media/catalog/product/cache/d6b455d3cae0b752f31861d86730a658/d/o/dom_benedictine_liqueur_750ml.jpg' },
