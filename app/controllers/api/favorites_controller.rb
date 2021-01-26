@@ -1,10 +1,10 @@
 class Api::FavoritesController < Api::ApplicationController
 
   def create
-    @recipe = Recipe.find(params[:recipe_id])
-    @num_before = @recipe.favorites.size
+    #@recipe = Recipe.find(params[:recipe_id])
+    @num_before = Recipe.find(params[:recipe_id]).favorites.size
     @favorite = Favorite.create(favorite_params)
-    @num_of_favs = @recipe.favorites.size
+    @num_of_favs = Recipe.find(params[:recipe_id]).favorites.size
 
     render :json => {
       favorite: @favorite,
