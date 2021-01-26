@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const firstNames = ['Jane', 'John', 'Anna', 'Maria', 'Jeff', 'Morgan', 'Jenifer', 'Olga', 'Anna', 'Tyler'];
+const firstNames = ['Jane', 'John', 'Anna', 'Maria', 'Jeff', 'Morgan', 'Jennifer', 'Olga', 'Anna', 'Tyler'];
 const lastNames = ['White', 'Black', 'Green', 'Seagull', 'Bear', 'Racoon', 'Edison', 'Einstein', 'Sikorski', 'Maxwell'];
 const domains2 = ['example', 'sample', 'goodmail', 'darkside'];
 const domains1 = ['com', 'org', 'co', 'ru', 'su', 'em', 'to'];

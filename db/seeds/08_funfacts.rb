@@ -9,7 +9,7 @@ Funfact.create! text: "the most ancient clay tablet found in Mesopotamia says ab
 image_url: 'https://www.ancientpages.com/wp-content/uploads/2017/08/ancientbeer.jpg'
 
 Funfact.create! text: "the name 'Bloody Mary' is associated with a number of historical figures—particularly Queen Mary I of England",
-image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Anthonis_Mor_001.jpg/1200px-Anthonis_Mor_001.jpg'
+image_url: 'https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTU3ODc5MDgzNzQ4MTA3OTk5/mary-tudor.jpg'
 
 Funfact.create! text: "it takes 600 Grapes to Make One Bottle of Wine",
 image_url: 'https://blog.eckraus.com/wp-content/uploads/2012/05/Squeezing-Grapes-Into-Glass.png'
