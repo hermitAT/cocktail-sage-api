@@ -45,7 +45,7 @@ module SearchHelper
         if params[:result_strength][0] == "["
           strength_range = params[:result_strength].tr('[]','').split(',').map { |num| num.to_i}
           puts(strength_range)
-          results['strength'] = Recipe.where("result_strength > ? AND result_strength <= ?", "#{strength_range[0]}", "#{strength_range[1]}").ids
+          results['strength'] = Recipe.where("result_strength >= ? AND result_strength < ?", "#{strength_range[0]}", "#{strength_range[1]}").ids
         else
           results['strength'] = Recipe.where('result_strength' => 0).ids
         end
