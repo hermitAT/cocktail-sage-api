@@ -1,6 +1,7 @@
 # Cocktail Sage API
 
-An API connected to the CocktailSage React application, serving recipe, ingredient and user data to be displayed within JSX!
+An API connected to the [Cocktail Sage React](https://github.com/hermitAT/react-sage) application, serving recipe, ingredient and user data to be displayed within JSX!
+
 
 ## DB Setup & Seeding + Running the Server
 1. Run `bundle install` to install dependencies.
