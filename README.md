@@ -69,6 +69,6 @@ ex. `/api/recipes/:id`:
   "category_id": 1,
   "created_at": "2021-01-30T20:40:04.329Z",
   "updated_at": "2021-01-30T20:40:04.329Z",
-  "description": "A distilled drink or liquor is an alcoholic drink produced by distilling ethanol produced by means of fermenting grain, etc. . . ."
+  "description": "A distilled drink or liquor is an alcoholic drink produced by distilling ethanol etc."
 }
 ```
