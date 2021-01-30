@@ -22,8 +22,8 @@ ex. `/api/recipes/:id`:
       "recipe": {
         "id": 4,
         "name": "Shiny Beach",
-        "summary": "When the going gets tough, you can try one of these and forget where they were going to begin with!",
-        "instruction": "Start with a tall glass, place a cherry at the bottom, and then top with ice.. etc.",
+        "summary": "When the going gets tough, etc.",
+        "instruction": "Start with a tall glass, etc.",
         "image_url": "https://images.unsplash.com/photo...jpg",
         "parent_id": null,
         "result_strength": 159,
@@ -69,6 +69,6 @@ ex. `/api/recipes/:id`:
   "category_id": 1,
   "created_at": "2021-01-30T20:40:04.329Z",
   "updated_at": "2021-01-30T20:40:04.329Z",
-  "description": "A distilled drink or liquor is an alcoholic drink produced by distilling ethanol etc."
+  "description": "A distilled drink or liquor, etc."
 }
 ```
