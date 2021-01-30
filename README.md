@@ -10,5 +10,65 @@ An API connected to the CocktailSage React application, serving recipe, ingredie
 #
 ### API Responses
 
-Use `bin/rake routes` to display the list of available routes. All endpoints returning a recipe will return the data in this format:
+Use `bin/rake routes` to display the list of available routes.
 
+All endpoints returning a recipe will return the data in this format,
+ex. `/api/recipes/:id`:
+
+```json
+{
+  "recipe": [
+    {
+      "recipe": {
+        "id": 4,
+        "name": "Shiny Beach",
+        "summary": "When the going gets tough, you can try one of these and forget where they were going to begin with!",
+        "instruction": "Start with a tall glass, place a cherry at the bottom, and then top with ice. Add your alcohol, and then top with mixers. Stir, but not enough to dislodge the cherry from the bottom. Garnish with an extra slice of orange and enjoy!",
+        "image_url": "https://images.unsplash.com/photo-1606924735276-fbb5b325e933?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzN8fGNvY2t0YWlsfGVufDB8MHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "parent_id": null,
+        "result_strength": 159,
+        "flavour_id": 3,
+        "user_id": 10,
+        "created_at": "2020-05-03T09:11:00.000Z",
+        "updated_at": "2021-01-30T20:40:04.700Z"
+      },
+      "parent": null,
+      "rating": "3.0",
+      "users_rated": 3,
+      "ingredients": [
+        {...},
+      ],
+      "comments": [
+        {
+          "comment": {
+          "id": 505,
+          "text": "I can neither say that I liked it nor disliked. It just tasteless",
+          "recipe_id": 4,
+          "user_id": 14,
+          "created_at": "2020-11-15T09:27:00.000Z",
+          "updated_at": "2021-01-30T20:40:13.921Z"
+        },
+        "user": {}
+        }
+      ],
+      "users_favourited": [...]
+    }
+  ]
+}
+```
+
+`/api/ingredients/:id`:
+
+```json
+"ingredient": {
+  "id": 2,
+  "name": "Brandy",
+  "image_url": "https://cdn2.bigcommerce.com/server5500/tpbc2s65/products/1326/images/1359/stockvsop1Lnew__75434__48694.1500051756.1280.1280.jpg?c=2",
+  "strength": 450,
+  "flavour_id": 4,
+  "category_id": 1,
+  "created_at": "2021-01-30T20:40:04.329Z",
+  "updated_at": "2021-01-30T20:40:04.329Z",
+  "description": "A distilled drink or liquor is an alcoholic drink produced by distilling ethanol produced by means of fermenting grain, fruit, or vegetables. Unsweetened, distilled, alcoholic drinks that have an alcohol content of at least 20% ABV are called spirits. For the most common distilled drinks, such as whiskey and vodka, the alcohol content is around 40%. The term hard liquor is used in North America to distinguish distilled drinks from undistilled ones (implicitly weaker)."
+}
+```
