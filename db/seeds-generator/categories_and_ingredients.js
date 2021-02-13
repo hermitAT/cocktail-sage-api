@@ -45,7 +45,7 @@ const categoriesAndIngredients = {
     "Grapefruit juice": { strength: 0, image_url: 'https://www.londondrugs.com/on/demandware.static/-/Sites-londondrugs-master/default/dw187b0214/products/L0338298/large/L0338298.JPG', description: mixer_desc },
     "Lemon juice": { strength: 0, image_url: 'https://images.heb.com/is/image/HEBGrocery/002243408', description: mixer_desc },
     "Lemonade": { strength: 0, image_url: 'https://d2d8wwwkmhfcva.cloudfront.net/800x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_ed554868-b018-4273-b1d6-4137ec653a63.png', description: mixer_desc },
-    "Lime juice": { strength: 0, image_url: 'https://media.healthyfood.com/wp-content/uploads/2017/03/How-to-choose-fruit-juices-and-drinks-500x500.jpg', description: mixer_desc },
+    "Lime juice": { strength: 0, image_url: 'https://assets.shop.loblaws.ca/products_jpeg/20971992/en/20971992_lrg_1_@1x.jpg', description: mixer_desc },
     "Orange juice": { strength: 0, image_url: 'https://media.healthyfood.com/wp-content/uploads/2017/03/How-to-choose-fruit-juices-and-drinks-500x500.jpg', description: mixer_desc },
     "Pineapple juice": { strength: 0, image_url: 'https://5.imimg.com/data5/EE/FL/GLADMIN-28464664/pineapple-500x500.png', description: mixer_desc },
     "Soda water": { strength: 0, image_url: 'https://4.imimg.com/data4/WE/XS/MY-5285174/packaged-soda-water-500x500.jpg', description: mixer_desc },

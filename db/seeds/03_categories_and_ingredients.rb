@@ -281,7 +281,7 @@ category_mixers.ingredients.create!({
   description: "Soft drinks are called soft in contrast with hard alcoholic drinks. Small amounts of alcohol may be present in a soft drink, but the alcohol content must be less than 0.5% of the total volume of the drink in many countries and localities if the drink is to be considered non-alcoholic. Unsweetened sparkling water may be consumed as an alternative to soft drinks.",
   strength: 0,
   flavour_id: 5,
-  image_url: "https://media.healthyfood.com/wp-content/uploads/2017/03/How-to-choose-fruit-juices-and-drinks-500x500.jpg"
+  image_url: "https://assets.shop.loblaws.ca/products_jpeg/20971992/en/20971992_lrg_1_@1x.jpg"
 })
 
 category_mixers.ingredients.create!({
